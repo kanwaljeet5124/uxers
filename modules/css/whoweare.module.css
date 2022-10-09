@@ -1,0 +1,10 @@
+.left_section{
+    border-right: 1px solid rgba(0,0,0,0.5);
+    padding-right: clamp(5rem, -4.5455rem + 31.8182vh, 9.375rem);
+}
+.left_section img{
+    max-width: 285px;
+}
+.right_section > div{
+    margin-bottom: clamp(2rem, -0.4545rem + 8.1818vh, 3.125rem);;
+}

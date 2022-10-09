@@ -1,0 +1,12 @@
+.container {
+  max-width:clamp(18.125rem, 3.3750rem + 73.7500vw, 69.75rem);
+  width:100%;
+  margin:0 auto;
+}
+.section{
+  margin: clamp(5rem, -4.5455rem + 31.8182vh, 9.375rem) 0;
+  display: block;
+}
+.cursor-pointer{
+  cursor: pointer;
+}

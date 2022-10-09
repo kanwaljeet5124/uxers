@@ -1,0 +1,41 @@
+.banner_wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: clamp(5rem, -18.1818rem + 77.2727vw, 15.625rem);
+    position: relative;
+}
+.banner_wrapper::before{
+    content: "";
+    position: absolute;
+    background-image: url("../../public/bg-elements.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.banner_content{
+    position: relative;
+    z-index: 2;
+}
+.banner_wrapper p{
+    max-width: 330px;
+    margin: 5px auto 17px;
+    font-style: italic;
+}
+.banner_content h5{
+    margin-bottom: 45px;
+}
+.banner_content h5 img:first-child{
+    opacity: 0.25;
+    margin-right: 3px;
+}
+.banner_content h5 img:nth-child(2){
+    margin-right: 3px;
+}
