@@ -5,9 +5,17 @@ export default function WhatWeDo() {
     const tabRef = useRef(null)
     const allSubTypeRef = useRef(null)
     const webSubTypeRef = useRef(null)
+    const digitalSubTypeRef = useRef(null)
+    const uiSubTypeRef = useRef(null)
+    const analyticsSubTypeRef = useRef(null)
+    const appSubTypeRef = useRef(null)
     const [typeTab, setTypeTab] = useState("all")
     const [allSubType, setAllSubType] = useState("web")
     const [webSubType, setWebSubType] = useState("react")
+    const [digitalSubType, setDigitalSubType] = useState("web")
+    const [uiSubType, setUiSubType] = useState("web")
+    const [analyticsSubType, setAnalyticsSubType] = useState("web")
+    const [appSubType, setAppSubType] = useState("web")
     const typeTabHandler = (e) => {
         tabRef.current.querySelectorAll("h5").forEach((item)=>{
             item.classList.remove(styles.active)
@@ -28,6 +36,34 @@ export default function WhatWeDo() {
         })
         e.currentTarget.classList.add(styles.active)
         setWebSubType(e.currentTarget.getAttribute("value"))
+    }
+    const digitalSubTypeHandler = (e) => {
+        digitalSubTypeRef.current.querySelectorAll("div").forEach((item)=>{
+            item.classList.remove(styles.active)
+        })
+        e.currentTarget.classList.add(styles.active)
+        setDigitalSubType(e.currentTarget.getAttribute("value"))
+    }
+    const analyticsSubTypeHandler = (e) => {
+        analyticsSubTypeRef.current.querySelectorAll("div").forEach((item)=>{
+            item.classList.remove(styles.active)
+        })
+        e.currentTarget.classList.add(styles.active)
+        setAnalyticsSubType(e.currentTarget.getAttribute("value"))
+    }
+    const uiSubTypeHandler = (e) => {
+        uiSubTypeRef.current.querySelectorAll("div").forEach((item)=>{
+            item.classList.remove(styles.active)
+        })
+        e.currentTarget.classList.add(styles.active)
+        setUiSubType(e.currentTarget.getAttribute("value"))
+    }
+    const appSubTypeHandler = (e) => {
+        appSubTypeRef.current.querySelectorAll("div").forEach((item)=>{
+            item.classList.remove(styles.active)
+        })
+        e.currentTarget.classList.add(styles.active)
+        setAppSubType(e.currentTarget.getAttribute("value"))
     }
   return (
     <div className='section'>
@@ -196,31 +232,31 @@ export default function WhatWeDo() {
             </div>}
             {typeTab == "web" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
                 <div ref={webSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
-                    <div value="react" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={allSubTypeHandler}>
+                    <div value="react" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={webSubTypeHandler}>
                         <span>React</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="next" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="next" className='d-flex d-align-center d-justify-space-between text-grey' onClick={webSubTypeHandler}>
                         <span>Next JS</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="three" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="three" className='d-flex d-align-center d-justify-space-between text-grey' onClick={webSubTypeHandler}>
                         <span>Three JS</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="vue" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="vue" className='d-flex d-align-center d-justify-space-between text-grey' onClick={webSubTypeHandler}>
                         <span>Vue</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="html" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="html" className='d-flex d-align-center d-justify-space-between text-grey' onClick={webSubTypeHandler}>
                         <span>HTML</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
@@ -322,46 +358,34 @@ export default function WhatWeDo() {
                 </div>
             </div>}
             {typeTab == "digital" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
-                <div ref={allSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
-                    <div value="web" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                <div ref={digitalSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
+                    <div value="web" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={digitalSubTypeHandler}>
                         <span>Web design Services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={digitalSubTypeHandler}>
                         <span>Mobile app UI/UX services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={digitalSubTypeHandler}>
                         <span>UI/UX Consulting</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={digitalSubTypeHandler}>
                         <span>Graphic Design</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="design" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Web design services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="front" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Front End Development</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
                 </div>
                 <div className={`col-7 ${styles["right_section"]}`}>
-                    {allSubType == "web" && <>
+                    {digitalSubType == "web" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             Digital Marketing Services
                         </h2>
@@ -379,7 +403,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "app" && <>
+                    {digitalSubType == "app" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             App Design Services
                         </h2>
@@ -397,7 +421,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "ui" && <>
+                    {digitalSubType == "ui" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             UI/UX Design Services
                         </h2>
@@ -415,45 +439,9 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "graphic" && <>
+                    {digitalSubType == "graphic" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             Graphic Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "design" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Web Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "front" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Frontend Services
                         </h2>
                         <p className='l-27 text-black'>
                             From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
@@ -472,46 +460,22 @@ export default function WhatWeDo() {
                 </div>
             </div>}
             {typeTab == "analytics" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
-                <div ref={allSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
-                    <div value="web" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                <div ref={analyticsSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
+                    <div value="web" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={analyticsSubTypeHandler}>
                         <span>Web design Services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={analyticsSubTypeHandler}>
                         <span>Mobile app UI/UX services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>UI/UX Consulting</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Graphic Design</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="design" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Web design services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="front" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Front End Development</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
                 </div>
                 <div className={`col-7 ${styles["right_section"]}`}>
-                    {allSubType == "web" && <>
+                    {analyticsSubType == "web" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             Data Analytics Services
                         </h2>
@@ -529,81 +493,9 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "app" && <>
+                    {analyticsSubType == "app" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             App Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "ui" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            UI/UX Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "graphic" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Graphic Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "design" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Web Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "front" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Frontend Services
                         </h2>
                         <p className='l-27 text-black'>
                             From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
@@ -622,38 +514,38 @@ export default function WhatWeDo() {
                 </div>
             </div>}
             {typeTab == "ui" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
-                <div ref={allSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
-                    <div value="web" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                <div ref={uiSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
+                    <div value="web" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={uiSubTypeHandler}>
                         <span>Web design Services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={uiSubTypeHandler}>
                         <span>Mobile app UI/UX services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={uiSubTypeHandler}>
                         <span>UI/UX Consulting</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={uiSubTypeHandler}>
                         <span>Graphic Design</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="design" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="design" className='d-flex d-align-center d-justify-space-between text-grey' onClick={uiSubTypeHandler}>
                         <span>Web design services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="front" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="front" className='d-flex d-align-center d-justify-space-between text-grey' onClick={uiSubTypeHandler}>
                         <span>Front End Development</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
@@ -661,7 +553,7 @@ export default function WhatWeDo() {
                     </div>
                 </div>
                 <div className={`col-7 ${styles["right_section"]}`}>
-                    {allSubType == "web" && <>
+                    {uiSubType == "web" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             UI/UX Design Services
                         </h2>
@@ -679,7 +571,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "app" && <>
+                    {uiSubType == "app" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             App Design Services
                         </h2>
@@ -697,7 +589,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "ui" && <>
+                    {uiSubType == "ui" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             UI/UX Design Services
                         </h2>
@@ -715,7 +607,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "graphic" && <>
+                    {uiSubType == "graphic" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             Graphic Design Services
                         </h2>
@@ -733,7 +625,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "design" && <>
+                    {uiSubType == "design" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             Web Design Services
                         </h2>
@@ -751,7 +643,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "front" && <>
+                    {uiSubType == "front" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             Frontend Services
                         </h2>
@@ -772,46 +664,28 @@ export default function WhatWeDo() {
                 </div>
             </div>}
             {typeTab == "app" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
-                <div ref={allSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
-                    <div value="web" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                <div ref={appSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
+                    <div value="web" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={appSubTypeHandler}>
                         <span>Web design Services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={appSubTypeHandler}>
                         <span>Mobile app UI/UX services</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
-                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
+                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={appSubTypeHandler}>
                         <span>UI/UX Consulting</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Graphic Design</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="design" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Web design services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="front" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Front End Development</span> 
                         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
                         </svg>
                     </div>
                 </div>
                 <div className={`col-7 ${styles["right_section"]}`}>
-                    {allSubType == "web" && <>
+                    {appSubType == "web" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             App Development Services
                         </h2>
@@ -829,7 +703,7 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "app" && <>
+                    {appSubType == "app" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             App Design Services
                         </h2>
@@ -847,63 +721,9 @@ export default function WhatWeDo() {
                         <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
-                    {allSubType == "ui" && <>
+                    {appSubType == "ui" && <>
                         <h2 className='f-400 l-55 mb-4'>
                             UI/UX Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "graphic" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Graphic Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "design" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Web Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "front" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Frontend Services
                         </h2>
                         <p className='l-27 text-black'>
                             From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
