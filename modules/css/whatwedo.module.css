@@ -1,6 +1,5 @@
 .service_detail .left_section{
     padding-right: 50px;
-    padding-top: 60px;
 }
 .left_section > div{
     padding: 24px 32px 24px 50px;
@@ -24,7 +23,13 @@
     border-radius: 4px;
 }
 .left_section > div:hover::before{
-    
+    cursor: pointer;
+    width: 100%;
+}
+.left_section > div.active span{
+    color: var(--white);
+}
+.left_section > div.active::before{
     cursor: pointer;
     width: 100%;
 }
