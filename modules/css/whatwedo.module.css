@@ -41,3 +41,9 @@
     background-color: #EBF3FF;
     padding: 38px 50px;
 }
+.type-tabs h5.active{
+    background: var(--gradient);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
