@@ -1,0 +1,16 @@
+import React from 'react'
+import styles from './css/header.module.css'
+export default function Header() {
+  return (
+    <div className={`container d-flex d-flex-wrap d-align-center d-justify-space-between ${styles["header"]}`}>
+        <img src="logo-head.png" alt='uxerslab'/>
+        <div className='d-flex d-flex-wrap d-align-center'>
+            <h5 className='f-500 l-21 text-primary pl-2 pr-2'>what we do</h5>
+            <h5 className='f-500 l-21 text-primary pl-2 pr-2'>who we are</h5>
+            <h5 className='f-500 l-21 text-primary pl-2 pr-2'>our work</h5>
+            <h5 className='btn f-500 l-21 text-primary ml-2 mr-2'>Let's talk</h5>
+            <img src="search.svg" alt="search" className='ml-2'/>
+        </div>
+    </div>
+  )
+}

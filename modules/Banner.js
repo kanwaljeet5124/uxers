@@ -1,8 +1,9 @@
 import styles from "./css/banner.module.css"
-
+import Header from "./Header"
 export default function Banner() {
   return (
     <div className={`${styles["banner_wrapper"]}`} style={{backgroundImage:`url("/banner-bg.svg")`}}>
+        <Header/>
         <div className={`container h-100 text-align-center ${styles["banner_content"]}`}>
             <h1 className="col-12 text-align-center l-70 f-600 text-secondary">
                 We Build Your <span className="f-700 text-gradient">Ideas</span><br />to Execute

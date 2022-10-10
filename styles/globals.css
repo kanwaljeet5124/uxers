@@ -100,6 +100,10 @@ html,body{
 .font-22{
   font-size: clamp(1.125rem, 1.0536rem + 0.3571vw, 1.375rem);
 }
+.font-50{
+  font-size: clamp(1.75rem, 1.3214rem + 2.1429vw, 3.25rem);
+}
+
 .text-align-center{
   text-align: center;
 }
@@ -541,7 +545,11 @@ html,body{
 .ls-03{
   letter-spacing: -0.03em;
 }
-
+.btn{
+  padding: 17px 33px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
 /* Font Weight Ends */
 .gap-20{
   gap: 20px;

@@ -4,8 +4,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: clamp(5rem, -18.1818rem + 77.2727vw, 15.625rem);
     position: relative;
+    padding: 30px 0 0 0;
 }
 .banner_wrapper::before{
     content: "";
@@ -21,6 +21,7 @@
     z-index: 1;
 }
 .banner_content{
+    padding-top:clamp(5rem, 2.5357rem + 12.3214vw, 13.625rem);
     position: relative;
     z-index: 2;
 }
