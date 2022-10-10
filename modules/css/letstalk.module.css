@@ -1,3 +1,78 @@
+/* header module */
+.talk-modal-wrapper{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.talk-modal-wrapper::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 50vw;
+    background-color: #EBF3FF;
+    background-image: url("../../public/bg-elements.svg");
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.talk-modal-wrapper::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    height: 100%;
+    width: 50vw;
+    background-color: white;
+    z-index: 5;
+}
+.intro-wrapper,.form-wrapper{
+    padding: 50px 80px;
+    z-index: 6;
+    position: relative;
+}
+.talk-modal-wrapper form input{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--grey);
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+    border-radius: 4px;
+}
+.talk-modal-wrapper form textarea{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 150%;
+    color: var(--grey);
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+    border-radius: 4px;
+}
+.talk-modal-wrapper form button{
+    padding: 17px 58px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--primary);
+    font-weight: 750;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* black module */
 .wrapper{
     padding: 120px 0;
     box-sizing: border-box;
@@ -44,7 +119,105 @@
     z-index: 1;
 }
 @media screen and (max-width:767.98px){
+    .talk-modal-wrapper{
+        height: auto;
+        width: 100vw;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: #EBF3FF;
+        z-index: 3;
+    }
+    .talk-modal-wrapper > div{
+        padding: 30px;
+    }
+    .talk-modal-wrapper form input{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--grey);
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-bottom: 25px;
+        box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+        border-radius: 4px;
+    }
+    .talk-modal-wrapper form textarea{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--grey);
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+        border-radius: 4px;
+    }
+    .talk-modal-wrapper form button{
+        padding: 17px ;
+        background-color: var(--primary);
+        color: var(--white);
+        border: 1px solid var(--primary);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+    }
     .wrapper button{
         margin-top: 50px;
     }
+}
+@media screen and (min-width:768px) and (max-width:1199.98px){
+    .talk-modal-wrapper{
+        height: auto;
+        width: 100vw;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: #EBF3FF;
+        z-index: 3;
+    }
+    .talk-modal-wrapper > div{
+        padding: 30px 45px;
+    }
+    .talk-modal-wrapper form input{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--grey);
+        padding: 15px 25px;
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-bottom: 25px;
+        box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+        border-radius: 4px;
+    }
+    .talk-modal-wrapper form textarea{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--grey);
+        padding: 15px 25px;
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+        border-radius: 4px;
+    }
+    .talk-modal-wrapper form button{
+        padding: 17px ;
+        background-color: var(--primary);
+        color: var(--white);
+        border: 1px solid var(--primary);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+    } 
 }

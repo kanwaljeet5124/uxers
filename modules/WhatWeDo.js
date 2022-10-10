@@ -80,157 +80,81 @@ export default function WhatWeDo() {
                 <h5 value="ui" className='f-500 l-27 cursor-pointer text-grey p-1 rounded-20' onClick={typeTabHandler}>UI/UX designers</h5>
                 <h5 value="app" className='f-500 l-27 cursor-pointer text-grey p-1 rounded-20' onClick={typeTabHandler}>App Development</h5>
             </div>
-            {typeTab == "all" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
-                <div ref={allSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
-                    <div value="web" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={allSubTypeHandler}>
-                        <span>Web design Services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="app" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Mobile app UI/UX services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="ui" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>UI/UX Consulting</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="graphic" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Graphic Design</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="design" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Web design services</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div value="front" className='d-flex d-align-center d-justify-space-between text-grey' onClick={allSubTypeHandler}>
-                        <span>Front End Development</span> 
-                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3422 1.99904L16.0664 4.72403L-2.29768e-07 4.74353L-1.64195e-07 6.24367L16.0567 6.22416L13.3414 8.9394L14.4013 10L17.3408 7.06049C17.5498 6.85153 17.7156 6.60345 17.8287 6.33042C17.9418 6.05739 18 5.76475 18 5.46922C18 5.17369 17.9418 4.88105 17.8287 4.60802C17.7156 4.33499 17.5498 4.08691 17.3408 3.87795L14.4013 0.938442L13.3422 1.99904Z" fill="white"/>
-                        </svg>
-                    </div>
+            <div className={`mt-5 d-flex ${styles["service_detail"]}`}>
+                <div className={`d-flex d-flex-wrap ${styles["right_section"]}`}>
+                    <h2 className='col-12 f-400 l-55 mb-4'>
+                        Web Design Services
+                    </h2>
+                    <p className='col-12 l-27 text-black'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
+                    </p>
+                    <p className='col-12 l-27 text-black mt-2'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
+                    </p>
+
+                    <a href='#' className='col-12 btn btn-primary'>Check Our Introduced Package</a>
+                    <h4 className='col-12 l-35 f-400 mt-5'>
+                        Review’s Specific to this Services
+                    </h4>
+                    <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
+                    <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                 </div>
-                <div className={`col-7 ${styles["right_section"]}`}>
-                    {allSubType == "web" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Web Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
+                <div className={`d-flex d-flex-wrap ${styles["right_section"]}`}>
+                    <h2 className='col-12 f-400 l-55 mb-4'>
+                        Web Design Services
+                    </h2>
+                    <p className='col-12 l-27 text-black'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
+                    </p>
+                    <p className='col-12 l-27 text-black mt-2'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
+                    </p>
 
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "app" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            App Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "ui" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            UI/UX Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "graphic" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Graphic Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "design" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Web Design Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
-                    {allSubType == "front" && <>
-                        <h2 className='f-400 l-55 mb-4'>
-                            Frontend Services
-                        </h2>
-                        <p className='l-27 text-black'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
-                        </p>
-                        <p className='l-27 text-black mt-2'>
-                            From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
-                        </p>
-
-                        <a href='#' className='btn btn-primary'>Check Our Introduced Package</a>
-                        <h4 className='l-35 f-400 mt-5'>
-                            Review’s Specific to this Services
-                        </h4>
-                        <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
-                        <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
-                    </>}
+                    <a href='#' className='col-12 btn btn-primary'>Check Our Introduced Package</a>
+                    <h4 className='col-12 l-35 f-400 mt-5'>
+                        Review’s Specific to this Services
+                    </h4>
+                    <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
+                    <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                 </div>
-            </div>}
-            {typeTab == "web" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
+                <div className={`d-flex d-flex-wrap ${styles["right_section"]}`}>
+                    <h2 className='col-12 f-400 l-55 mb-4'>
+                        Web Design Services
+                    </h2>
+                    <p className='col-12 l-27 text-black'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
+                    </p>
+                    <p className='col-12 l-27 text-black mt-2'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
+                    </p>
+
+                    <a href='#' className='col-12 btn btn-primary'>Check Our Introduced Package</a>
+                    <h4 className='col-12 l-35 f-400 mt-5'>
+                        Review’s Specific to this Services
+                    </h4>
+                    <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
+                    <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
+                </div>
+                <div className={`d-flex d-flex-wrap ${styles["right_section"]}`}>
+                    <h2 className='col-12 f-400 l-55 mb-4'>
+                        Web Design Services
+                    </h2>
+                    <p className='col-12 l-27 text-black'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way. We make it easy for businesses to find the most talented developers, designers and marketers as per their needs faster and more efficiently.
+                    </p>
+                    <p className='col-12 l-27 text-black mt-2'>
+                        From expertise-based services to becoming a one-stop-solution for all talent needs, Uplers has indeed come a long way.
+                    </p>
+
+                    <a href='#' className='col-12 btn btn-primary'>Check Our Introduced Package</a>
+                    <h4 className='col-12 l-35 f-400 mt-5'>
+                        Review’s Specific to this Services
+                    </h4>
+                    <img className='mt-4 mr-4' src="Service-Review.png" alt="Service Specific Review"/>
+                    <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
+                </div>
+            </div>
+            {/* {typeTab == "web" && <div className={`col-12 d-flex d-flex-wrap mt-5 ${styles["service_detail"]}`}>
                 <div ref={webSubTypeRef} className={`col-5 d-flex d-flex-column ${styles["left_section"]}`}>
                     <div value="react" className={`d-flex d-align-center d-justify-space-between text-grey ${styles["active"]}`} onClick={webSubTypeHandler}>
                         <span>React</span> 
@@ -740,7 +664,7 @@ export default function WhatWeDo() {
                         <img className='mt-4' src="Service-Review.png" alt="Service Specific Review"/>
                     </>}
                 </div>
-            </div>}
+            </div>} */}
         </div>
     </div>
   )

@@ -66,6 +66,9 @@ html,body{
 .bg-black{
   background-color: var(--black);
 }
+.bg-white{
+  background-color: var(--white);
+}
 /* background-color end */
 
 /* heading tags & font size  start*/
@@ -545,7 +548,7 @@ html,body{
 .ls-03{
   letter-spacing: -0.03em;
 }
-.btn{
+.btn-primary-outline{
   padding: 17px 33px;
   border: 1px solid var(--primary);
   color: var(--primary);

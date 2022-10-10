@@ -1,2 +1,9 @@
-.header{
+.header-small{
+    display: none;
+}
+@media screen and (max-width:1200px) {
+    
+    .header-small{
+        display: flex;
+    }
 }

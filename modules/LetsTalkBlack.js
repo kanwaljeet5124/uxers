@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './css/letstalk.module.css'
-export default function LetsTalk() {
+export default function LetsTalkBlack() {
   return (
     <div className='bg-black'>
         <div className={`container p-relative d-flex d-flex-wrap d-align-center d-justify-space-between ${styles["wrapper"]}`}>
