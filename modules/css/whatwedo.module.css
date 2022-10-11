@@ -41,7 +41,19 @@
     position: relative;
     z-index: 3;
 }
-.service_detail{
+
+.right_section{
+    background-color: #EBF3FF;
+    padding: 38px 50px;
+}
+.type-tabs h5.active{
+    background: var(--gradient);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    user-select: none;
+}
+/* .service_detail{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -55,10 +67,4 @@
     background-color: #EBF3FF;
     padding: 38px 50px;
     scroll-snap-align: start;
-}
-.type-tabs h5.active{
-    background: var(--gradient);
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
+} */
