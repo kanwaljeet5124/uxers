@@ -1,9 +1,20 @@
-.header-small{
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    padding: 18px 0;
+    background-color: var(--light-blue);
+}
+
+.header-small {
     display: none;
 }
+
 @media screen and (max-width:1200px) {
-    
-    .header-small{
+
+    .header-small {
         display: flex;
     }
 }

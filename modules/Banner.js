@@ -23,7 +23,6 @@ export default function Banner() {
                     <img src="scroll.svg" />
                 </span>
             </div>
-            
         </div>
     )
 }

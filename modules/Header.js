@@ -7,8 +7,8 @@ export default function Header() {
       setTalkModal(prev => !prev)
   }
   return (
-    <>
-      <div className={`container d-flex d-flex-wrap d-align-center d-justify-space-between ${styles["header"]}`}>
+    <div className={`${styles["header"]} d-flex d-flex-wrap d-align-center d-justify-space-between`}>
+      <div className={`container d-flex d-flex-wrap d-align-center d-justify-space-between`}>
           <img src="logo-head.png" alt='uxerslab'/>
           <div className='d-flex d-flex-wrap d-align-center z-index-2'>
               <h5 className='f-500 l-21 text-primary pl-2 pr-2'>what we do</h5>
@@ -19,7 +19,6 @@ export default function Header() {
           </div>
           {talkModal && <LetsTalkModal handler={talkModalHandler} />}
       </div>
-      
-    </>
+    </div>
   )
 }
