@@ -57,7 +57,7 @@ export default function Footer(){
         </div>
         <div className="bg-primary p-2 mt-5">
             <div className="container d-flex d-justify-space-between">
-                <h5 className="f-500 l-24 text-white">Uxerslab -   © 2022 All Rights Reserved</h5>
+                <h5 className="f-500 l-24 text-white">Uxerslab -   © 2023 All Rights Reserved</h5>
                 <div className="d-flex d-flex-wrap d-align-center gap-20">
                     <img src="fb.svg" alt="facebook"/>
                     <img src="twitter.svg" alt="twitter"/>

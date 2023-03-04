@@ -1,0 +1,37 @@
+.slide{
+    padding: 18px 18px 40px 18px;
+    min-height: 350px;
+    box-sizing: border-box;
+    position: relative;
+    background-size: cover;
+}
+.slide div{
+    z-index: 2;
+}
+.slide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0077B6;
+    opacity: 0.5;
+    z-index: 1;
+}
+.article-heading{
+    position: absolute;
+    padding: 22px 27px;
+    right: 0;
+    bottom: -40px;
+    box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+.articles-tab h5.active{
+    color: var(--black);
+}
+.blog-text{
+    position: absolute;
+    right: 0;
+    top: 0;
+}

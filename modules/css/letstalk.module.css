@@ -110,8 +110,9 @@
 }
 .wrapper button:hover::before{
     width:100%;
-    color: var(--primary);
+    z-index: -1;
 }
+
 .wave-element{
     position: absolute;
     top: 0;
