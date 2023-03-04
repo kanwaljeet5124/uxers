@@ -2,7 +2,7 @@ import LetsTalkModal from "./LetsTalkModal"
 import { useState } from "react"
 import styles from './css/header.module.css'
 export default function Header() {
-  const [talkModal,setTalkModal] = useState(true)
+  const [talkModal,setTalkModal] = useState(false)
   const talkModalHandler = () => {
       setTalkModal(prev => !prev)
   }

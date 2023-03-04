@@ -19,7 +19,7 @@ export default function Banner() {
                     <img src="arrow.svg" alt="Expore Icon" className="mr-1" />
                     Explore
                 </h5>
-                <span className="col-12 text-align-center mt-5 d-flex d-align-center d-justify-center">
+                <span className="col-12 text-align-center mt-3 d-flex d-align-center d-justify-center">
                     <img src="scroll.svg" />
                 </span>
             </div>
