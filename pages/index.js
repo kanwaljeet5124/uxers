@@ -15,7 +15,7 @@ export default function index() {
       <WhatWeDo></WhatWeDo>
       <Slider/>
       <HomePageArticles/>
-      <LetsTalkBlack/>
+      <LetsTalkBlack type={0} />
       <Footer/>
     </div>
   )

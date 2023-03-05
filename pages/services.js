@@ -4,6 +4,8 @@ import Teams from '../modules/Teams'
 import Inquire from '../modules/Inquire'
 import ServicesProvided from '../modules/ServicesProvided'
 import Slider from '../modules/Slider'
+import LetsTalkBlack from '../modules/LetsTalkBlack'
+import Footer from '../modules/Footer'
 export default function services() {
   return (
     <>
@@ -12,6 +14,8 @@ export default function services() {
       <Inquire/>
       <ServicesProvided/>
       <Slider/>
+      <LetsTalkBlack type={1}/>
+      <Footer/>
     </>
   )
 }

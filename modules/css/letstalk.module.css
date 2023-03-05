@@ -79,7 +79,6 @@
     overflow: hidden;
 }
 .wrapper button{
-    width: 196.79px;
     height: 56px;
     background: var(--primary);
     border: 1px solid var(--primary);
