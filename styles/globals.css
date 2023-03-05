@@ -60,7 +60,9 @@ body {
 .text-white {
   color: var(--white);
 }
-
+.text-center{
+  text-align: center;
+}
 /* text-color End */
 /* background-color Start */
 .bg-primary {
