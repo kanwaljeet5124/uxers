@@ -1,10 +1,8 @@
-import React from 'react'
-
 export default function FeaturedBlog() {
   return (
     <div className='featured-blog container d-flex d-flex-wrap'>
         <div className='col-6 d-flex'>
-            <img src='/blog-image.png' alt="Blog Image" />
+            <img src='/blog-image.png' alt="Blog Image" className="col-12" />
         </div>
         <div className='col-6 bg-white p-3'>
             <span className='blog_badge'>FEATURED</span>

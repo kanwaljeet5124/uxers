@@ -7,7 +7,7 @@ import SectionHeading from './SectionHeading';
 export default function Slider() {
     const slider = useRef();
     return (
-        <div className=''>
+        <div className='mt-90'>
             <div className='col-12'>
                 <SectionHeading classes="text-align-center" badge="What Our Client Says" title="View Our  " highlight="Testimonials"></SectionHeading>
             </div>
