@@ -2,3 +2,36 @@
     padding: 150px 0 237px;
     background-color: var(--light-blue);
 }
+
+.blog_badge {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    word-spacing: 0.2em;
+    line-height: 110%;
+    color: var(--primary);
+    background-color: var(--light-blue);
+}
+
+.blog_author {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.blog_author>img {
+    height: 54px;
+    width: 54px;
+}
+
+.blog_author_name {
+    margin-top: 4px;
+}
+
+.blog_author_name svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
