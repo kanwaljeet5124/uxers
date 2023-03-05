@@ -1,6 +1,18 @@
 .blog-banner {
-    padding: 150px 0 237px;
+    position: relative;
+    z-index: 1;
+    padding: 150px 0 100px;
+}
+
+.blog-banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 65%;
     background-color: var(--light-blue);
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
 
 .blog_badge {
@@ -34,4 +46,103 @@
     width: 24px;
     height: 24px;
     margin-right: 10px;
+}
+
+.article_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.article_card {
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.article_card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, #152532 100%);
+    z-index: -1;
+}
+
+.article_badge {
+    background-color: rgba(0, 119, 182, 0.5);
+    color: var(--white);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    padding: 5px 26px 2px;
+}
+
+.article_content {
+    padding: 25px;
+}
+
+.article_author {
+    margin-top: 20px;
+}
+
+.article_author img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.article_author h6 {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.article_author svg {
+    margin-right: 8px;
+}
+
+.article_author img {
+    margin-right: 14px;
+}
+
+.blog_form {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.blog_form input {
+    padding: 12px 19px;
+    background-color: var(--white);
+    border: none;
+    width: 500px;
+    border-radius: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    height: 50px;
+    color: var(--grey);
+}
+
+.blog_form input:focus-visible {
+    outline: none;
+}
+
+.blog_form button {
+    background: linear-gradient(90deg, #0077B6 0%, #00B4D8 100%);
+    border: none;
+    height: 50px;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
