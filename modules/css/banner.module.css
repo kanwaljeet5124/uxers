@@ -40,3 +40,29 @@
 .banner_content h5 img:nth-child(2){
     margin-right: 3px;
 }
+/* Service Banner */
+.service-form input,.service-form select{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    padding: 10px 24px;
+    margin-top: 18px;
+    width: 100%;
+    color: var(--grey);
+    box-sizing: border-box;
+}
+.service-form select option{
+    color: var(--grey);
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    padding: 10px 24px;
+    margin-top: 18px;
+    width: 100%;
+    color: var(--grey);
+}

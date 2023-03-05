@@ -70,7 +70,9 @@ body {
 .bg-dark {
   background-color: var(--dark-blue);
 }
-
+.bg-sky{
+  background-color: var(--light-blue);
+}
 .bg-gradient {
   background-color: var(--gradient);
 }
@@ -716,7 +718,13 @@ li {
 .ls-03 {
   letter-spacing: -0.03em;
 }
-
+.btn{
+  padding: 17px 40px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  border: none;
+}
 .btn-primary-outline {
   padding: 17px 33px;
   border: 1px solid var(--primary);
