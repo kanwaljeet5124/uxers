@@ -3,7 +3,7 @@ import React from 'react'
 export default function Inquire() {
   return (
     <div className='mt-90'>
-        <div className='container bg-sky d-flex d-flex-wrap d-justify-center'>
+        <div className='container bg-sky d-flex d-flex-wrap d-justify-center pt-5'>
             <div className='col-10 d-flex d-flex-wrap d-justify-center ptb-50'>
                 <h2 className='f-400 col-12 text-center l-55'>Our Professional <span className='f-700 text-gradient'> Web Development Services </span>will make your new website project a Success</h2>
                 <h5 className='f-400 l-27 text-black mt-4 text-center'>Launching a new website can be daunting, but with our professional Web Development Services, you can be confident that your website will look great and function flawlessly.</h5>

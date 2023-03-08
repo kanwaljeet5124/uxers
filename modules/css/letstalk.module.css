@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     z-index: 3;
+    transition: 0.4s all ease-in-out;
 }
 .talk-modal-wrapper::before{
     position: absolute;

@@ -1,0 +1,15 @@
+.faq-item{
+    box-shadow: 0px 2px 4px rgba(29, 53, 87, 0.1);
+    border-radius: 4px;
+    padding: 30px 50px;
+    height: 85px;
+    overflow-y: hidden;
+    transition: 0.4s all ease;
+    margin-top: 25px;
+}
+.faq-item.active{
+    height: auto;
+}
+.faq-item.active svg{
+    transform: rotate(180deg);
+}

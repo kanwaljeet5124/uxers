@@ -5,15 +5,11 @@ export default function Footer(){
             <div className="col-xs-12 col-lg-5 mt-5">
                 <div className="col-9 d-flex d-flex-wrap ">
                     <img src="logo.png" alt="uxerslab"/>
-                    <h6 className="col-12 f-400 text-grey l-21 mt-5 pr-5 d-flex">
-                        We source, vet & deploy the top marketing & technology professionals India has to offer. Global companies hire from Uplers to make their hiring faster, easier & cost-effective.
+                    <img src="f1.png" className="col-12 mt-50"/>
+                    <h6 className="col-12 f-400 text-grey l-21 mt-5  d-flex">
+                        We source, vet & deploy the top marketing & technology professionals India has to offer. Global companies hire from Uplers to make their hiring faster, easier & cost-effective
                     </h6>
-                    <div className="col-xs-12 pr-5 d-flex d-flex-wrap d-justify-space-between mt-5">
-                        <h6 className="f-400  l-27 ">Who we are</h6>
-                        <h6 className="f-400  l-27 ">What we do</h6>
-                        <h6 className="f-400 l-27 ">Our Work</h6>
-                        <h6 className="f-400  l-27 ">Our Blogs</h6>
-                    </div>
+                    
                 </div>
             </div>
             <div className="col-xs-12 col-lg-5 d-flex d-flex-wrap mt-5">
