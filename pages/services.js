@@ -7,6 +7,8 @@ import Slider from '../modules/Slider'
 import LetsTalkBlack from '../modules/LetsTalkBlack'
 import Footer from '../modules/Footer'
 import FAQ from '../modules/FAQ'
+import ExploreBlog from '../modules/ExploreBlog'
+import ExploreCard from '../modules/ExploreCard'
 export default function services() {
   return (
     <>
@@ -17,6 +19,7 @@ export default function services() {
       <Slider/>
       <LetsTalkBlack type={1}/>
       <FAQ/>
+      <ExploreBlog />
       <Footer/>
     </>
   )

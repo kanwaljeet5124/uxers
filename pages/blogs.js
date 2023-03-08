@@ -4,6 +4,7 @@ import SectionHeading from "../modules/SectionHeading"
 import Articles from "../modules/Articles"
 import LetsTalkBlack from "../modules/LetsTalkBlack"
 import Footer from "../modules/Footer"
+import ExploreBlog from "../modules/ExploreBlog"
 export default function Blogs() {
   return (
     <>
@@ -25,6 +26,7 @@ export default function Blogs() {
         <section>
           <SectionHeading classes="text-align-center" title="Recent  " highlight="Articles" />
           <Articles />
+          <ExploreBlog />
           <LetsTalkBlack />
           <Footer />
         </section>
